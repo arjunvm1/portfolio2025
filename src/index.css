@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Override the default --font-sans variable */
+  /* This maps the font-sans utility to Montserrat, followed by the system fallbacks */
+  --font-sans: "Montserrat", var(--font-sans);
+}
+
+html {
+  font-family: Montserrat;
+}
