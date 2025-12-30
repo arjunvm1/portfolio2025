@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import {  Github } from "lucide-react"
+import { Github } from "lucide-react"
 import porfolio from "../assets/images/portfolio.png"
 import netflix from "../assets/images/netflix.png"
 import mernestate from "../assets/images/mernestate.png"
@@ -20,8 +20,8 @@ const projects: Project[] = [
     description:
       "A full-stack real-estate platform built with React, Node, and Stripe integration.",
     image: mernestate,
-    tech: ["React", "Framer Motion", "Tailwind CSS","node","Redux","JWT","Stripe"],
-    link: "https://github.com/",
+    tech: ["React", "Framer Motion", "Tailwind CSS", "node", "Redux", "JWT", "Stripe"],
+    link: "https://github.com/arjunvm1/mern-estate",
   },
   {
     title: "Portfolio Website",
@@ -29,15 +29,14 @@ const projects: Project[] = [
       "A highly animated portfolio built with Framer Motion, Tailwind CSS, and modern UI patterns.",
     image: porfolio,
     tech: ["React", "Framer Motion", "Tailwind CSS"],
-    link: "https://github.com/",
+    link: "https://github.com/arjunvm1/portfolio2025",
   },
   {
     title: "Netflix clone",
-    description:
-      "A clean, responsive Netflix landling page clone using MoviesAPI.",
+    description: "A clean, responsive Netflix landling page clone using MoviesAPI.",
     image: netflix,
     tech: ["React", "Redux", "Public API"],
-    link: "https://github.com/",
+    link: "https://github.com/arjunvm1/React-netflix-clone",
   },
 ]
 
@@ -56,9 +55,7 @@ export default function Projects() {
       >
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-          <h2 className="text-3xl sm:text-4xl font-light tracking-tight">
-            Projects
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-light tracking-tight">Projects</h2>
           <div className="text-sm text-neutral-400 font-mono">Selected Work</div>
         </div>
 
@@ -93,13 +90,9 @@ export default function Projects() {
 
               {/* Info */}
               <div className="lg:col-span-5 space-y-3">
-                <h3 className="text-lg sm:text-xl font-medium text-white">
-                  {project.title}
-                </h3>
+                <h3 className="text-lg sm:text-xl font-medium text-white">{project.title}</h3>
 
-                <p className="text-neutral-400 leading-relaxed max-w-lg">
-                  {project.description}
-                </p>
+                <p className="text-neutral-400 leading-relaxed max-w-lg">{project.description}</p>
 
                 {/* Tech badges */}
                 <div className="flex flex-wrap gap-2 pt-2">
@@ -126,7 +119,7 @@ export default function Projects() {
                     target="_blank"
                     className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors"
                   >
-                    <Github/>
+                    <Github />
                     View on GitHub
                   </a>
                 )}

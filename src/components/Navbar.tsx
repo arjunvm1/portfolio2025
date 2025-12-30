@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, User, Briefcase, FolderGit2, Mail, Layers } from "lucide-react"
@@ -32,7 +30,7 @@ export default function Navbar() {
           className="text-lg font-semibold tracking-tight
                      text-neutral-900 dark:text-white"
         >
-          Arjun<span className="text-neutral-500">.</span>
+          Arjun<span className="text-neutral-500">.dev</span>
         </motion.a>
 
         {/* Desktop Nav */}

@@ -10,23 +10,23 @@ const experiences = [
     role: "Junior Software Developer",
     company: "Cygnoz Private Limited",
     description:
-      "Developing scalable web applications with a focus on clean architecture, reusable components, and smooth user interactions across modern frontend stacks.",
-    tech: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Framer Motion"],
+      "Working on enterprise-grade web applications involving complex business logic such as tax calculation, discounts, and billing workflows. Responsible for building reusable React components, managing complex form state, improving data consistency, and collaborating closely with backend APIs to ensure accurate and reliable user interactions.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
   },
   {
     year: "2023 — 2024",
-    role: "Junior Software Developer",
-    company: "Luminar Technohub",
-    description:
-      "Built and maintained full-stack web applications, collaborating closely with designers and backend teams to deliver performant, production-ready solutions.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Framer Motion", "TypeScript"],
-  },
-  {
-    year: "2023",
     role: "MERN Stack Intern",
     company: "Luminar Technolab",
     description:
-      "Completed an intensive eight-month internship working on full-stack projects, REST APIs, and responsive UI development using the MERN stack.",
+      "Completed an intensive eight-month internship focused on full-stack web development. Gained hands-on experience building REST APIs, implementing frontend validation, handling CRUD operations, and developing responsive user interfaces using the MERN stack.",
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
   },
 ]

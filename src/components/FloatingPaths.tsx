@@ -1,5 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
+import { Github, Linkedin, Mail } from "lucide-react"
 
 function FloatingPaths({ position }: { position: number }) {
   const paths = Array.from({ length: 36 }, (_, i) => ({
@@ -70,7 +71,7 @@ export default function BackgroundPaths({
                    h-48 sm:h-64 md:h-80
                    bg-linear-to-t
                    from-neutral-950
-                   via-neutral-950/90
+                   via-neutral-950/70
                    to-transparent"
       />
 
@@ -118,11 +119,52 @@ export default function BackgroundPaths({
               ease: "easeOut",
             }}
             className="text-base sm:text-lg md:text-xl
-                       text-neutral-600 dark:text-neutral-400
-                       max-w-2xl mx-auto leading-relaxed"
+             text-neutral-600 dark:text-neutral-400
+             max-w-2xl mx-auto leading-relaxed text-center"
           >
             {text}
           </motion.p>
+
+          {/* Social Icons */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 1.1,
+              duration: 0.8,
+              ease: "easeOut",
+            }}
+            className="mt-6 flex items-center justify-center gap-6"
+          >
+            <a
+              href="https://github.com/arjunvm1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors"
+              aria-label="GitHub"
+            >
+              <Github className="h-6 w-6" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/arjun-v-m-39111a28b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-6 w-6" />
+            </a>
+
+            {/* Optional */}
+            <a
+              href="mailto:arjunvm628@gmail.com"
+              className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors"
+              aria-label="Email"
+            >
+              <Mail className="h-6 w-6" />
+            </a>
+          </motion.div>
 
           {/* Decorative glass pill */}
           <motion.div
