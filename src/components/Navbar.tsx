@@ -12,6 +12,7 @@ const navItems = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
