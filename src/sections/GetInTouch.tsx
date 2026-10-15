@@ -81,7 +81,7 @@ export default function GetInTouch() {
               <input
               aria-required
                 type="text"
-                name="name"
+                name="from_name"
                 required
                 className="w-full px-4 py-3 rounded-lg bg-neutral-900 text-white
                            border border-neutral-800 focus:border-neutral-600
@@ -95,7 +95,7 @@ export default function GetInTouch() {
               <input
               aria-required
                 type="email"
-                name="email"
+                name="email_id"
                 required
                 className="w-full px-4 py-3 rounded-lg bg-neutral-900 text-white
                            border border-neutral-800 focus:border-neutral-600

@@ -147,7 +147,7 @@ export default function BackgroundPaths({
             </a>
 
             <a
-              href="https://www.linkedin.com/in/arjun-v-m-39111a28b/"
+              href="https://www.linkedin.com/in/arjunvm1/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors"

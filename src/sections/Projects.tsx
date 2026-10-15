@@ -5,6 +5,7 @@ import { Github } from "lucide-react"
 import porfolio from "../assets/images/portfolio.png"
 import netflix from "../assets/images/netflix.png"
 import mernestate from "../assets/images/mernestate.png"
+import vana from "../assets/images/van-resort.png"
 
 type Project = {
   title: string
@@ -22,6 +23,14 @@ const projects: Project[] = [
     image: mernestate,
     tech: ["React", "Framer Motion", "Tailwind CSS", "node", "Redux", "JWT", "Stripe"],
     link: "https://github.com/arjunvm1/mern-estate",
+  },
+  {
+    title: "vana Resort booking website",
+    description:
+      "A full-stack Resort booking website  built with React, Node",
+    image: vana,
+    tech: ["React", "Framer Motion", "Tailwind CSS", "node", "Redux", "JWT",],
+    link: "https://github.com/arjunvm1/resort-booking",
   },
   {
     title: "Portfolio Website",
