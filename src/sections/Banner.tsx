@@ -21,7 +21,8 @@ function Banner({ title = "Arjun V M" }: Props) {
       <div className="absolute bottom-10 sm:bottom-20 left-1/2 -translate-x-1/2 z-20 px-4">
         <motion.a
           href="/ArjunVMResume2026.pdf"
-          download
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 20 }}
@@ -38,7 +39,7 @@ function Banner({ title = "Arjun V M" }: Props) {
       transition-all cursor-pointer
     "
         >
-          Download Resume
+          Open Resume
         </motion.a>
       </div>
     </section>
