@@ -8,9 +8,27 @@ import Projects from "./sections/Projects"
 import Services from "./sections/Services"
 import AnimatedFooter from "./components/AnimatedFooter"
 import Snowfall from "react-snowfall"
+import { useEffect, useState } from "react"
 
 function App() {
   useLenis()
+  const [isDark, setIsDark] = useState(() => {
+    try {
+      return window.localStorage.getItem("portfolio-theme") !== "light"
+    } catch {
+      return true
+    }
+  })
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDark)
+    document.documentElement.style.colorScheme = isDark ? "dark" : "light"
+    try {
+      window.localStorage.setItem("portfolio-theme", isDark ? "dark" : "light")
+    } catch {
+      // Keep the selected theme for this session if storage is unavailable.
+    }
+  }, [isDark])
 
   // Month-based check (0 = January, 11 = December)
   const currentMonth = new Date().getMonth()
@@ -50,7 +68,7 @@ function App() {
         }}
       />
 
-      <Banner />
+      <Banner isDark={isDark} onToggleTheme={() => setIsDark((value) => !value)} />
       <Experience />
       <Projects />
       <Services />

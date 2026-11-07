@@ -8,6 +8,8 @@ import type { CSSProperties } from "react"
 
 type Props = {
   title?: string
+  isDark: boolean
+  onToggleTheme: () => void
 }
 
 const glassStyle = {
@@ -21,7 +23,7 @@ const glassStyle = {
   "--lg-rim-shine": 0.13,
 } as CSSProperties
 
-function Banner({ title = "Arjun V M" }: Props) {
+function Banner({ title = "Arjun V M", isDark, onToggleTheme }: Props) {
   return (
     <section
       id="about"
@@ -31,7 +33,7 @@ function Banner({ title = "Arjun V M" }: Props) {
       <BackgroundPaths title={title} />
 
       {/* Navbar */}
-      <Navbar />
+      <Navbar isDark={isDark} onToggleTheme={onToggleTheme} />
 
       {/* Resume Button */}
       <div className="absolute bottom-10 sm:bottom-20 left-1/2 -translate-x-1/2 z-20 px-4">

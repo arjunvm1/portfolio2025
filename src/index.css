@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* Override the default --font-sans variable */
   /* This maps the font-sans utility to Montserrat, followed by the system fallbacks */
@@ -9,4 +11,64 @@
 
 html {
   font-family: Montserrat;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+}
+
+/* The portfolio's content sections use a dark palette by default. These
+   scoped overrides provide a readable light palette when dark mode is off. */
+html:not(.dark) #experience,
+html:not(.dark) #projects,
+html:not(.dark) #services,
+html:not(.dark) #contact,
+html:not(.dark) footer {
+  background-color: #f8fafc;
+  color: #171717;
+}
+
+html:not(.dark) #experience .text-white,
+html:not(.dark) #projects .text-white,
+html:not(.dark) #services .text-white,
+html:not(.dark) #contact .text-white,
+html:not(.dark) footer .text-white {
+  color: #171717;
+}
+
+html:not(.dark) #experience [class*="text-neutral-"],
+html:not(.dark) #projects [class*="text-neutral-"],
+html:not(.dark) #services [class*="text-neutral-"],
+html:not(.dark) #contact [class*="text-neutral-"],
+html:not(.dark) footer [class*="text-neutral-"] {
+  color: #52525b;
+}
+
+html:not(.dark) #experience [class*="border-neutral-"],
+html:not(.dark) #projects [class*="border-neutral-"],
+html:not(.dark) #services [class*="border-neutral-"],
+html:not(.dark) #contact [class*="border-neutral-"] {
+  border-color: #d4d4d8;
+}
+
+html:not(.dark) #projects [class*="bg-neutral-900"],
+html:not(.dark) #services [class*="bg-neutral-900"],
+html:not(.dark) #contact [class*="bg-neutral-900"] {
+  background-color: #fff;
+}
+
+html:not(.dark) #contact input,
+html:not(.dark) #contact textarea {
+  background-color: #fff;
+  color: #171717;
+  border-color: #d4d4d8;
+}
+
+html:not(.dark) footer .bg-linear-to-b {
+  background-image: linear-gradient(to bottom, transparent, #f8fafc);
 }

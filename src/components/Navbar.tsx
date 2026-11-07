@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Glass } from "glisse"
-import { Menu, X, User, Briefcase, FolderGit2, Mail, Layers } from "lucide-react"
+import { Menu, X, User, Briefcase, FolderGit2, Mail, Layers, Sun, Moon } from "lucide-react"
 
 const navItems = [
   { label: "About", href: "#about", icon: User },
@@ -11,7 +11,7 @@ const navItems = [
   { label: "Contact", href: "#contact", icon: Mail },
 ]
 
-export default function Navbar() {
+export default function Navbar({ isDark, onToggleTheme }: { isDark: boolean; onToggleTheme: () => void }) {
   const [open, setOpen] = useState(false)
 
   const glassStyle = {
@@ -83,6 +83,17 @@ export default function Navbar() {
               )
             })}
           </nav>
+
+          <button
+            type="button"
+            onClick={onToggleTheme}
+            className="ml-auto md:ml-0 mr-4 md:mr-0 inline-flex items-center gap-2 rounded-full border border-neutral-300/70 dark:border-white/15 px-3 py-2 text-sm font-medium text-neutral-800 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-white/10 transition-colors"
+            aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
+            title={`Switch to ${isDark ? "light" : "dark"} mode`}
+          >
+            {isDark ? <Sun size={16} /> : <Moon size={16} />}
+            <span className="hidden sm:inline">{isDark ? "Light" : "Dark"} mode</span>
+          </button>
 
           {/* Mobile Toggle */}
           <button

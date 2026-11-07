@@ -65,13 +65,13 @@ export default function BackgroundPaths({
         <FloatingPaths position={-1} />
       </div>
 
-      {/* Bottom dark gradient overlay for smooth section transition */}
+      {/* Bottom gradient blends the hero into the next section in both themes. */}
       <div
         className="pointer-events-none absolute bottom-0 left-0 right-0
                    h-48 sm:h-64 md:h-80
                    bg-linear-to-t
-                   from-neutral-950
-                   via-neutral-950/70
+                   from-neutral-100 dark:from-neutral-950
+                   via-neutral-100/70 dark:via-neutral-950/70
                    to-transparent"
       />
 
