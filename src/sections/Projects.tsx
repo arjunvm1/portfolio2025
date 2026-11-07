@@ -6,6 +6,7 @@ import porfolio from "../assets/images/portfolio.png"
 import netflix from "../assets/images/netflix.png"
 import mernestate from "../assets/images/mernestate.png"
 import vana from "../assets/images/van-resort.png"
+import issueflow from "../assets/images/issueflow.png"
 
 type Project = {
   title: string
@@ -24,6 +25,23 @@ const projects: Project[] = [
     tech: ["React", "Framer Motion", "Tailwind CSS", "node", "Redux", "JWT", "Stripe"],
     link: "https://github.com/arjunvm1/mern-estate",
   },
+  {
+  title: "IssueFlow – Issue Tracker",
+  description:
+    "A modern full-stack issue tracking application featuring workspace management, issue creation, status tracking, and an interactive analytics dashboard.",
+  image: issueflow,
+  tech: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Prisma",
+    "MySQL",
+    "Tailwind CSS",
+    "Authentication",
+    "REST APIs",
+  ],
+  link: "https://github.com/arjunvm1/Issue-tracker",
+},
   {
     title: "vana Resort booking website",
     description:
